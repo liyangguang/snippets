@@ -1,4 +1,4 @@
-Handle user access control for a SPA.
+# Handle user access control for a SPA
 
 - Check user permission on all pages
 - Check admin permission on specific pages.
