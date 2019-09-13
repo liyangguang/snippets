@@ -1,0 +1,36 @@
+:host {
+  position: relative;
+}
+
+button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+}
+
+.icon {
+  width: 1.4em;
+}
+
+.success-toast {
+  background: #fff;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  font-size: .9em;
+  left: 50%;
+  opacity: 0;
+  padding: .2em 1em;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%, 0);
+  transition: opacity var(--transition);
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.success-toast.visible {
+  opacity: 1;
+  visibility: visible;
+}
