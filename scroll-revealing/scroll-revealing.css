@@ -1,0 +1,23 @@
+section {
+  transition: opacity .5s ease, transform .5s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+section._faded-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Basic styles */
+section {
+  height: 50em;
+  background: pink;
+}
+
+.line {
+  width: 1px;
+  margin: 0 auto;
+  background: #ddd;
+}
