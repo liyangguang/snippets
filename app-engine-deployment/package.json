@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Yangguang Li <liyangguangcn@gmail.com>",
+  "scripts": {
+    "serve": "vue-cli-service serve <change to your dev server script>",
+    "start": "npm run serve",
+    "build": "vue-cli-service build <change to your production build script>",
+    "deploy-only": "gcloud app deploy --project my-gcloud-project-name",
+    "deploy": "npm run build && gcloud app deploy --project my-gcloud-project-name"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}

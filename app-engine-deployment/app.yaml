@@ -1,0 +1,34 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+default_expiration: "1m"
+
+skip_files:
+- \.gitignore
+- ^\.git/.*
+- ^node_modules/(.*/)?
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+builtins:
+- deferred: on
+
+handlers:
+
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+
+- url: /dist
+  static_dir: dist/
+
+- url: /(.*\..*)$  # a file in the root level
+  static_files: dist/\1
+  upload: dist/.*\..*$
+
+- url: /(.*)$  # not a file, i.e. front end routes
+  static_files: dist/index.html
+  upload: dist/index.html
