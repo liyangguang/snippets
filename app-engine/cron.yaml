@@ -1,0 +1,5 @@
+cron:
+- description: "my task"
+  url: /my-cron-job/yangguang
+  schedule: 4 of oct 9:00
+  timezone: America/Los_Angeles

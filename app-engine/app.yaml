@@ -19,16 +19,19 @@ builtins:
 handlers:
 
 - url: /
-  static_files: dist/index.html
-  upload: dist/index.html
+  static_files: ui/index.html
+  upload: ui/index.html
 
-- url: /dist
-  static_dir: dist/
+- url: /dist  # The UI code bundle folder (not used in this example)
+  static_dir: ui/dist
+
+- url: /my-cron-job/.*
+  script: backend.main.app
 
 - url: /(.*\..*)$  # a file in the root level
-  static_files: dist/\1
-  upload: dist/.*\..*$
+  static_files: ui/dist/\1
+  upload: ui/dist/.*\..*$
 
 - url: /(.*)$  # not a file, i.e. front end routes
-  static_files: dist/index.html
-  upload: dist/index.html
+  static_files: ui/dist/index.html
+  upload: ui/dist/index.html

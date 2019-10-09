@@ -1,0 +1,9 @@
+{
+  "name": "app engine app",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Yangguang Li <liyangguangcn@gmail.com>",
+  "scripts": {
+    "deploy": "gcloud app deploy --project my-gcloud-project-name"
+  }
+}
