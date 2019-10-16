@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import firebase from 'firebase'
+import 'firebase/auth'
 
 import {router} from './router';
 import {checkIsAdmin, checkIsUser} from './firebase-helpers';
